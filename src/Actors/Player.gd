@@ -1,6 +1,6 @@
 extends Actor
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var is_jump_interrupted := Input.is_action_just_released("jump") and velocity.y < 0.0
 	var direction := get_direction()
 	velocity = calculate_move_velocity(velocity, direction, speed, is_jump_interrupted)
