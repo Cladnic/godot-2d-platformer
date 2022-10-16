@@ -22,7 +22,7 @@ _global_script_class_icons={
 
 config/name="godot-2d-platformer"
 config/description="First 2D platformer game made in godot"
-run/main_scene="res://src/Actors/Player.tscn"
+run/main_scene="res://src/Levels/LevelTemplate.tscn"
 config/icon="res://icon.png"
 
 [gui]

@@ -7,9 +7,11 @@
 extents = Vector2( 40, 44 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 44, 43.5 )
+extents = Vector2( 44, 44 )
 
 [node name="Player" type="KinematicBody2D"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.662227, 0.663279 )
 collision_mask = 8
 script = ExtResource( 2 )
 
@@ -24,6 +26,14 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -146 )
 current = true
+limit_left = 0
+limit_top = 0
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.0
+drag_margin_right = 0.0
 
 [node name="EnemyDetector" type="Area2D" parent="."]
 collision_layer = 0
@@ -32,7 +42,7 @@ monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
 modulate = Color( 0.0745098, 0.156863, 0.694118, 1 )
-position = Vector2( 0, -40.5 )
+position = Vector2( 0, -44 )
 shape = SubResource( 2 )
 
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
